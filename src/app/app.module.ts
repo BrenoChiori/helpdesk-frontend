@@ -25,7 +25,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-list.component';
-import { LoginComponent } from './component/login/login.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +57,6 @@ import { LoginComponent } from './component/login/login.component';
     MatIconModule,
     MatListModule,
     MatCardModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]
