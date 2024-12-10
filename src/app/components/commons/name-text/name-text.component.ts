@@ -45,4 +45,5 @@ export class NameTextComponent implements OnInit {
   onValueChange(value: string): void {
     this.ngModelValueChange.emit(value);
   }
+  
 }
