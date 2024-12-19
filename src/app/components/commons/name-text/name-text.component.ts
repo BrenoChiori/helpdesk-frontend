@@ -26,14 +26,14 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./name-text.component.css']
 })
 export class NameTextComponent implements OnInit {
-  @Input() labelName: string = '';
-  @Input() nameValue: string = '';
-  @Input() ngModelValue: string = '';
+  @Input() labelName: string;
+  @Input() nameValue: string;
+  @Input() ngModelValue: string;
   @Input() formControlValue?: FormControl;
   @Input() placeholderValue: string = 'Ex.. Fulano de Tal';
   @Input() maxLengthValue: string = '50';
-  @Input() maskValue: string = ''
-  @Input() typeValue: string = ''
+  @Input() maskValue: string;
+  @Input() typeValue: string;
   @Input() icon: any = ''
   
   @Output() ngModelValueChange = new EventEmitter<string>();
