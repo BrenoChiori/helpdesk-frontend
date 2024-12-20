@@ -41,6 +41,7 @@ import { ChamadoCreateComponent } from './components/chamado/chamado-create/cham
 import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
 import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-read.component';
 import { NameTextComponent } from './components/commons/name-text/name-text.component';
+import { FornecedorListComponent } from './components/fornecedor/fornecedor-list/fornecedor-list.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { NameTextComponent } from './components/commons/name-text/name-text.comp
     ChamadoCreateComponent,
     ChamadoUpdateComponent,
     ChamadoReadComponent,
-    NameTextComponent
+    NameTextComponent,
+    FornecedorListComponent
   ],
   imports: [
     BrowserModule,
