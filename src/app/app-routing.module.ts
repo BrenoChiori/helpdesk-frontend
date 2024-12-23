@@ -19,6 +19,7 @@ import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-
 import { FornecedorListComponent } from './components/fornecedor/fornecedor-list/fornecedor-list.component';
 import { FornecedorCreateComponent } from './components/fornecedor/fornecedor-create/fornecedor-create.component';
 import { FornecedorUpdateComponent } from './components/fornecedor/fornecedor-update/fornecedor-update.component';
+import { FornecedorReadComponent } from './components/fornecedor/fornecedor-read/fornecedor-read.component';
 
 const routes: Routes = [
   {
@@ -45,8 +46,8 @@ const routes: Routes = [
 
       {path: 'fornecedor',            component: FornecedorListComponent   },
       {path: 'fornecedor/create',     component: FornecedorCreateComponent },
-      {path: 'fornecedor/update/:id', component: FornecedorUpdateComponent }
-
+      {path: 'fornecedor/update/:id', component: FornecedorUpdateComponent },
+      {path: 'fornecedor/read/:id',   component: FornecedorReadComponent   }
     ]
   }
 ];

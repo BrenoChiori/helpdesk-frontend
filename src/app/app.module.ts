@@ -44,6 +44,7 @@ import { NameTextComponent } from './components/commons/name-text/name-text.comp
 import { FornecedorListComponent } from './components/fornecedor/fornecedor-list/fornecedor-list.component';
 import { FornecedorCreateComponent } from './components/fornecedor/fornecedor-create/fornecedor-create.component';
 import { FornecedorUpdateComponent } from './components/fornecedor/fornecedor-update/fornecedor-update.component';
+import { FornecedorReadComponent } from './components/fornecedor/fornecedor-read/fornecedor-read.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { FornecedorUpdateComponent } from './components/fornecedor/fornecedor-up
     NameTextComponent,
     FornecedorListComponent,
     FornecedorCreateComponent,
-    FornecedorUpdateComponent
+    FornecedorUpdateComponent,
+    FornecedorReadComponent
   ],
   imports: [
     BrowserModule,

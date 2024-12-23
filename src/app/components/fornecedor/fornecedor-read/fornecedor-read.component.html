@@ -1,0 +1,103 @@
+<div class="container mat-elevation-z8">
+    <h1 class="full-width">Atualizando Fornecedor</h1>
+    <img class="full-width" src="/assets/img/tecnico-create.svg" alt="">
+
+    <h2>Informações Fornecedor</h2>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Nome do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.nome" name="nome" disabled="true" matInput>
+        </mat-form-field>
+    </form>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>CPF ou CNPJ do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.documento" name="documento" disabled="true"
+                mask="000.000.000-00||00.000.000/0000-00" matInput>
+        </mat-form-field>
+    </form>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Email do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.email" name="email" disabled="true" matInput>
+        </mat-form-field>
+    </form>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Telefone do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.telefone" name="telefone" disabled="true"
+                mask="(00) 0000-0000||(00) 0 0000-0000" matInput>
+        </mat-form-field>
+    </form>
+
+    <div class="status-prioridade">
+        <mat-form-field appearance="outline">
+            <mat-label>Status do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.statusFornecedor" name="status" disabled="true" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Forma de Entrega</mat-label>
+            <input [value]="retornaEntrega(fornecedor.formadeEntrega)" name="formadeEntrega" disabled="true" matInput>
+        </mat-form-field>
+    </div>
+
+    <h2>Endereço Fornecedor</h2>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>CEP do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.endereco.cep" name="cep" mask="00000-000" disabled="true" matInput>
+        </mat-form-field>
+    </form>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Rua do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.endereco.rua" name="rua" disabled="true" matInput>
+        </mat-form-field>
+    </form>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Número do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.endereco.numero" name="numero" disabled="true" matInput>
+        </mat-form-field>
+    </form>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Complemento do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.endereco.complemento" name="complemento" disabled="true" matInput>
+        </mat-form-field>
+    </form>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Bairro do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.endereco.bairro" name="bairro" disabled="true" matInput>
+        </mat-form-field>
+    </form>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Cidade do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.endereco.cidade" name="cidade" disabled="true" matInput>
+        </mat-form-field>
+    </form>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Estado do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.endereco.estado" name="estado" disabled="true" matInput>
+        </mat-form-field>
+    </form>
+
+    <button routerLink="../../" class="full-width mat-elevation-z4" mat-stroked-button color="primary">Retornar</button>
+
+    <p class="full-width">Desenvolvido por Breno Chiori</p>
+</div>
