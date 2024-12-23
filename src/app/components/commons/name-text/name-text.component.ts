@@ -12,7 +12,7 @@ import { FormControl } from '@angular/forms';
         [(ngModel)]="ngModelValue"
         (ngModelChange)="onValueChange($event)"
         [formControl]="formControlValue"
-        required
+        [required]="isRequired"
         matInput 
         [placeholder]="placeholderValue"
         [maxlength]="maxLengthValue"
@@ -30,6 +30,7 @@ export class NameTextComponent implements OnInit {
   @Input() nameValue: string;
   @Input() ngModelValue: string;
   @Input() formControlValue?: FormControl;
+  @Input() isRequired: boolean = true;
   @Input() placeholderValue: string = 'Ex.. Fulano de Tal';
   @Input() maxLengthValue: string = '50';
   @Input() maskValue: string;
