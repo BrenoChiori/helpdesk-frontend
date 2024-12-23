@@ -17,6 +17,7 @@ import { ChamadoCreateComponent } from './components/chamado/chamado-create/cham
 import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
 import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-read.component';
 import { FornecedorListComponent } from './components/fornecedor/fornecedor-list/fornecedor-list.component';
+import { FornecedorCreateComponent } from './components/fornecedor/fornecedor-create/fornecedor-create.component';
 
 const routes: Routes = [
   {
@@ -26,22 +27,23 @@ const routes: Routes = [
     path: '', component: NavComponent, canActivate: [AuthGuard], children: [
       {path: 'home', component: HomeComponent},
 
-      {path: 'tecnicos',              component: TecnicoListComponent   },
-      {path: 'tecnicos/create',       component: TecnicoCreateComponent },
-      {path: 'tecnicos/update/:id',   component: TecnicoUpdateComponent },
-      {path: 'tecnicos/delete/:id',   component: TecnicoDeleteComponent },
+      {path: 'tecnicos',              component: TecnicoListComponent      },
+      {path: 'tecnicos/create',       component: TecnicoCreateComponent    },
+      {path: 'tecnicos/update/:id',   component: TecnicoUpdateComponent    },
+      {path: 'tecnicos/delete/:id',   component: TecnicoDeleteComponent    },
 
-      {path: 'clientes',              component: ClienteListComponent   },
-      {path: 'clientes/create',       component: ClienteCreateComponent },
-      {path: 'clientes/update/:id',   component: ClienteUpdateComponent },
-      {path: 'clientes/delete/:id',   component: ClienteDeleteComponent },
+      {path: 'clientes',              component: ClienteListComponent      },
+      {path: 'clientes/create',       component: ClienteCreateComponent    },
+      {path: 'clientes/update/:id',   component: ClienteUpdateComponent    },
+      {path: 'clientes/delete/:id',   component: ClienteDeleteComponent    },
 
-      {path: 'chamados',              component: ChamadoListComponent   },
-      {path: 'chamados/create',       component: ChamadoCreateComponent },
-      {path: 'chamados/update/:id',   component: ChamadoUpdateComponent },
-      {path: 'chamados/read/:id',     component: ChamadoReadComponent   },
+      {path: 'chamados',              component: ChamadoListComponent      },
+      {path: 'chamados/create',       component: ChamadoCreateComponent    },
+      {path: 'chamados/update/:id',   component: ChamadoUpdateComponent    },
+      {path: 'chamados/read/:id',     component: ChamadoReadComponent      },
 
-      {path: 'fornecedor',            component: FornecedorListComponent}
+      {path: 'fornecedor',            component: FornecedorListComponent   },
+      {path: 'fornecedor/create',     component: FornecedorCreateComponent },
 
     ]
   }
