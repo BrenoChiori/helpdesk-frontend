@@ -1,0 +1,110 @@
+<div class="container mat-elevation-z8">
+    <h1 class="full-width">Atualizando Fornecedor</h1>
+    <img class="full-width" src="/assets/img/tecnico-create.svg" alt="">
+
+    <h2>Informações Fornecedor</h2>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Nome do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.nome" name="nome" [formControl]="nome" required matInput placeholder="Ex. On-line Informática">
+        </mat-form-field>
+    </form>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>CPF ou CNPJ do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.documento" name="documento" [formControl]="documento" mask="000.000.000-00||00.000.000/0000-00" required matInput placeholder="Ex. 000.000.000-00 - ">
+        </mat-form-field>
+    </form>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Email do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.email" name="email" [formControl]="email" required matInput placeholder="Ex. empresa@email.com">
+        </mat-form-field>
+    </form>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Telefone do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.telefone" name="telefone" [formControl]="telefone" mask="(00) 0000-0000||(00) 0 0000-0000" required matInput placeholder="Ex. (00) 00000-0000">
+        </mat-form-field>
+    </form>
+
+    <div class="status-prioridade">
+        <mat-form-field appearance="outline">
+            <mat-label>Status {{fornecedor.statusFornecedor }}</mat-label>
+            <mat-select [(ngModel)]="fornecedor.statusFornecedor" name="statusFornecedor" [formControl]="statusFornecedor" required>
+                <mat-option value="ATIVO">ATIVO</mat-option>
+                <mat-option value="DESATIVADO">DESATIVADO</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Forma de Entrega {{fornecedor.formadeEntrega }}</mat-label>
+            <mat-select [(ngModel)]="fornecedor.formadeEntrega" name="formadeEntrega" [formControl]="formadeEntrega" required>
+                <mat-option value="ENTREGA">ENTREGA</mat-option>
+                <mat-option value="RETIRARLOJA">RETIRAR NA LOJA</mat-option>
+                <mat-option value="RETIRARPONTOCOLETA">RETIRAR PONTO DE COLETA</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <h2>Endereço Fornecedor</h2>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>CEP do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.endereco.cep" name="cep" mask="00000-000" [formControl]="cep" required matInput placeholder="Ex. Rua Example">
+        </mat-form-field>
+    </form>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Rua do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.endereco.rua" name="rua" [formControl]="rua" required matInput placeholder="Ex. Rua Example">
+        </mat-form-field>
+    </form>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Número do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.endereco.numero" name="numero" [formControl]="numero" required matInput placeholder="Ex. Rua Example">
+        </mat-form-field>
+    </form>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Complemento do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.endereco.complemento" name="complemento" [formControl]="complemento" required matInput placeholder="Ex. Rua Example">
+        </mat-form-field>
+    </form>
+    
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Bairro do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.endereco.bairro" name="bairro" [formControl]="bairro" required matInput placeholder="Ex. Rua Example">
+        </mat-form-field>
+    </form>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Cidade do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.endereco.cidade" name="cidade" [formControl]="cidade" required matInput placeholder="Ex. Rua Example">
+        </mat-form-field>
+    </form>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Estado do fornecedor</mat-label>
+            <input [(ngModel)]="fornecedor.endereco.estado" name="estado" [formControl]="estado" required matInput placeholder="Ex. Rua Example">
+        </mat-form-field>
+    </form>
+
+    <button (click)="update()" [disabled]="!validaCampos()" class="full-width mat-elevation-z4" mat-raised-button
+        color="primary">Atualizar</button>
+    <button routerLink="../../" class="full-width mat-elevation-z4" mat-stroked-button color="warn">Cancelar</button>
+
+    <p class="full-width">Desenvolvido por Breno Chiori</p>
+</div>
