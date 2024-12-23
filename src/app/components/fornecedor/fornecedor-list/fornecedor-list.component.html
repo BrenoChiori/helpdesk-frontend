@@ -8,6 +8,11 @@
       <mat-label>Filtro</mat-label>
       <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Fulano de Tal" #input>
     </mat-form-field>
+
+    <mat-radio-group color="primary">
+      <mat-radio-button (click)="orderByStatus('ATIVO')" value="ATIVO">ATIVO</mat-radio-button>
+      <mat-radio-button (click)="orderByStatus('DESATIVADO')" value="DESATIVADO">DESATIVADO</mat-radio-button>
+    </mat-radio-group>
   
     <div class="mat-elevation-z8">
   
