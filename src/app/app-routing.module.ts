@@ -20,6 +20,7 @@ import { FornecedorListComponent } from './components/fornecedor/fornecedor-list
 import { FornecedorCreateComponent } from './components/fornecedor/fornecedor-create/fornecedor-create.component';
 import { FornecedorUpdateComponent } from './components/fornecedor/fornecedor-update/fornecedor-update.component';
 import { FornecedorReadComponent } from './components/fornecedor/fornecedor-read/fornecedor-read.component';
+import { ProdutosListComponent } from './components/produtos/produtos-list/produtos-list.component';
 
 const routes: Routes = [
   {
@@ -47,7 +48,9 @@ const routes: Routes = [
       {path: 'fornecedor',            component: FornecedorListComponent   },
       {path: 'fornecedor/create',     component: FornecedorCreateComponent },
       {path: 'fornecedor/update/:id', component: FornecedorUpdateComponent },
-      {path: 'fornecedor/read/:id',   component: FornecedorReadComponent   }
+      {path: 'fornecedor/read/:id',   component: FornecedorReadComponent   },
+
+      {path: 'produtos',              component: ProdutosListComponent     }
     ]
   }
 ];
