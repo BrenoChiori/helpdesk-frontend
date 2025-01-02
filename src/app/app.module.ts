@@ -47,6 +47,7 @@ import { FornecedorUpdateComponent } from './components/fornecedor/fornecedor-up
 import { FornecedorReadComponent } from './components/fornecedor/fornecedor-read/fornecedor-read.component';
 import { ProdutosListComponent } from './components/produtos/produtos-list/produtos-list.component';
 import { ProdutosUpdateComponent } from './components/produtos/produtos-update/produtos-update.component';
+import { ProdutosReadComponent } from './components/produtos/produtos-read/produtos-read.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { ProdutosUpdateComponent } from './components/produtos/produtos-update/p
     FornecedorUpdateComponent,
     FornecedorReadComponent,
     ProdutosListComponent,
-    ProdutosUpdateComponent
+    ProdutosUpdateComponent,
+    ProdutosReadComponent
   ],
   imports: [
     BrowserModule,

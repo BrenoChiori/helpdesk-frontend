@@ -44,6 +44,6 @@ p {
     opacity: .5;
 }
 
-input[disabled] {
+input[disabled], mat-label {
     color: black;
 }

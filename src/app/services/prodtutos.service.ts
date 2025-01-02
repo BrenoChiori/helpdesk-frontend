@@ -19,6 +19,10 @@ export class ProdtutosService {
     return this.http.get<Produtos[]>(`${API_CONFIG.baseUrl}/produto`)
   }
 
+  create(prodtutos: Produtos): Observable<Produtos> {
+    return this.http.post<Produtos>(`${API_CONFIG.baseUrl}/produto`, prodtutos)
+  }
+
   update(produtos: Produtos): Observable<Produtos> {
     return this.http.put<Produtos>(`${API_CONFIG.baseUrl}/produto/${produtos.id}`, produtos);
   }

@@ -1,0 +1,29 @@
+<div class="container mat-elevation-z8">
+    <h1 class="full-width">Atualizando Produtos</h1>
+    <img class="full-width" src="/assets/img/tecnico-create.svg" alt="">
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Nome do Produto</mat-label>
+            <input [(ngModel)]="produtos.nomeProduto" name="nomeProduto" matInput disabled>
+        </mat-form-field>
+    </form>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Marca do Produto</mat-label>
+            <input [(ngModel)]="produtos.marca" name="marca" matInput disabled>
+        </mat-form-field>
+    </form>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Fornecedor</mat-label>
+            <input [(ngModel)]="produtos.fornecedor" name="fornecedor" matInput disabled>
+        </mat-form-field>
+    </form>
+
+    <button routerLink="../../" class="full-width mat-elevation-z4" mat-stroked-button color="primary">Retornar</button>
+
+    <p class="full-width">Desenvolvido por Breno Chiori</p>
+</div>

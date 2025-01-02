@@ -5,47 +5,39 @@
     <form class="form">
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>Titulo do chamado</mat-label>
-            <input disabled="true" [(ngModel)]="chamado.titulo" name="titulo" matInput placeholder="Ex. Trocar bateria de notebook">
+            <input disabled="true" [(ngModel)]="chamado.titulo" name="titulo" matInput>
         </mat-form-field>
     </form>
 
     <div class="status-prioridade">
-        <mat-form-field appearance="outline">
-            <mat-label>STATUS ({{ retornaStatus(chamado.status) }})</mat-label>
-            <mat-select disabled="true" [(ngModel)]="chamado.status" name="status" >
-                <mat-option value="0">ABERTO</mat-option>
-                <mat-option value="1">EM ANDAMENTO</mat-option>
-                <mat-option value="2">ENCERRADO</mat-option>
-            </mat-select>
-        </mat-form-field>
+        <form class="form">
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Status</mat-label>
+                <input disabled="true" [(ngModel)]="chamado.status" name="status" matInput>
+            </mat-form-field>
+        </form>
 
-        <mat-form-field appearance="outline">
-            <mat-label>PRIORIDADE ({{ retornaPrioridade(chamado.prioridade) }})</mat-label>
-            <mat-select disabled="true" [(ngModel)]="chamado.prioridade" name="prioridade" >
-                <mat-option value="0">BAIXA</mat-option>
-                <mat-option value="1">MÉDIA</mat-option>
-                <mat-option value="2">ALTA</mat-option>
-            </mat-select>
-        </mat-form-field>
+        <form class="form">
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Prioridade</mat-label>
+                <input disabled="true" [(ngModel)]="chamado.prioridade" name="prioridade" matInput>
+            </mat-form-field>
+        </form>
     </div>
 
-    <div class="tecnico">
-        <mat-form-field  class="full-width" appearance="outline">
-            <mat-label>TECNICO ({{chamado.nomeTecnico}})</mat-label>
-            <mat-select disabled="true" [(ngModel)]="chamado.tecnico" name="tecnico" >
-                <mat-option>{{chamado.nomeTecnico}}</mat-option>
-            </mat-select>
-        </mat-form-field>
-    </div>
-
-    <div class="cliente">
+    <form class="form">
         <mat-form-field class="full-width" appearance="outline">
-            <mat-label>CLIENTE ({{chamado.nomeCliente}})</mat-label>
-            <mat-select disabled="true" [(ngModel)]="chamado.cliente" name="cliente" >
-                <mat-option>{{chamado.nomeCliente}}</mat-option>
-            </mat-select>
+            <mat-label>Técnico</mat-label>
+            <input disabled="true" [(ngModel)]="chamado.nomeTecnico" name="nomeTecnico" matInput>
         </mat-form-field>
-    </div>
+    </form>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Cliente</mat-label>
+            <input disabled="true" [(ngModel)]="chamado.nomeCliente" name="nomeCliente" matInput>
+        </mat-form-field>
+    </form>
 
     <form class="form">
         <mat-form-field class="full-width" appearance="outline">

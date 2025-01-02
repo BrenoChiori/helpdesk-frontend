@@ -22,6 +22,7 @@ import { FornecedorUpdateComponent } from './components/fornecedor/fornecedor-up
 import { FornecedorReadComponent } from './components/fornecedor/fornecedor-read/fornecedor-read.component';
 import { ProdutosListComponent } from './components/produtos/produtos-list/produtos-list.component';
 import { ProdutosUpdateComponent } from './components/produtos/produtos-update/produtos-update.component';
+import { ProdutosReadComponent } from './components/produtos/produtos-read/produtos-read.component';
 
 const routes: Routes = [
   {
@@ -29,7 +30,7 @@ const routes: Routes = [
   },
   {
     path: '', component: NavComponent, canActivate: [AuthGuard], children: [
-      {path: 'home', component: HomeComponent},
+      {path: 'home',                  component: HomeComponent             },
 
       {path: 'tecnicos',              component: TecnicoListComponent      },
       {path: 'tecnicos/create',       component: TecnicoCreateComponent    },
@@ -52,7 +53,8 @@ const routes: Routes = [
       {path: 'fornecedor/read/:id',   component: FornecedorReadComponent   },
 
       {path: 'produtos',              component: ProdutosListComponent     },
-      {path: 'produtos/update/:id',   component: ProdutosUpdateComponent   }
+      {path: 'produtos/update/:id',   component: ProdutosUpdateComponent   },
+      {path: 'produtos/read/:id',     component: ProdutosReadComponent     }
     ]
   }
 ];

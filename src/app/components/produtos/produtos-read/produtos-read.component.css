@@ -17,13 +17,8 @@ img {
     height: 15rem;
 }
 
-.status-prioridade {
-    display: flex;
-    justify-content: space-between;
-}
-
-.status-prioridade form {
-    width: 49%;
+mat-form-field {
+    width: 100%;
 }
 
 .observacao {
@@ -40,6 +35,6 @@ p {
     opacity: .5;
 }
 
-input[disabled], textarea[disabled], mat-label {
+input[disabled] {
     color: black;
 }

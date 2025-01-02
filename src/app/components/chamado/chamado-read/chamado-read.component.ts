@@ -36,6 +36,8 @@ export class ChamadoReadComponent implements OnInit {
   findById() {
     this.chamadoService.findById(this.chamado.id).subscribe(resposta => {
       this.chamado = resposta
+      this.chamado.status = this.retornaStatus(resposta.status)
+      this.chamado.prioridade = this.retornaPrioridade(resposta.prioridade)
     }, ex => {
       this.toastService.error(ex.error.error)
     })
