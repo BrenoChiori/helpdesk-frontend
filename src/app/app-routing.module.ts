@@ -21,6 +21,7 @@ import { FornecedorCreateComponent } from './components/fornecedor/fornecedor-cr
 import { FornecedorUpdateComponent } from './components/fornecedor/fornecedor-update/fornecedor-update.component';
 import { FornecedorReadComponent } from './components/fornecedor/fornecedor-read/fornecedor-read.component';
 import { ProdutosListComponent } from './components/produtos/produtos-list/produtos-list.component';
+import { ProdutosUpdateComponent } from './components/produtos/produtos-update/produtos-update.component';
 
 const routes: Routes = [
   {
@@ -50,7 +51,8 @@ const routes: Routes = [
       {path: 'fornecedor/update/:id', component: FornecedorUpdateComponent },
       {path: 'fornecedor/read/:id',   component: FornecedorReadComponent   },
 
-      {path: 'produtos',              component: ProdutosListComponent     }
+      {path: 'produtos',              component: ProdutosListComponent     },
+      {path: 'produtos/update/:id',   component: ProdutosUpdateComponent   }
     ]
   }
 ];

@@ -11,7 +11,16 @@ export class ProdtutosService {
 
   constructor(private http: HttpClient) { }
 
+  findById(id: any): Observable<Produtos> {
+    return this.http.get<Produtos>(`${API_CONFIG.baseUrl}/produto/${id}`)
+  }
+
   findAll(): Observable<Produtos[]> {
     return this.http.get<Produtos[]>(`${API_CONFIG.baseUrl}/produto`)
   }
+
+  update(produtos: Produtos): Observable<Produtos> {
+    return this.http.put<Produtos>(`${API_CONFIG.baseUrl}/produto/${produtos.id}`, produtos);
+  }
+  
 }
