@@ -15,7 +15,7 @@ export class ProdutosListComponent implements OnInit {
   ELEMENT_DATA: Produtos[] = []
   FILTERED_DATA: Produtos[] = []
 
-  displayedColumns: string[] = ['id', 'marca', 'nomeProduto', 'fornecedor', 'acoes']
+  displayedColumns: string[] = ['id', 'nomeProduto', 'marca', 'fornecedor', 'acoes']
   dataSource = new MatTableDataSource<Produtos>(this.ELEMENT_DATA)
 
   @ViewChild(MatPaginator) paginator: MatPaginator
