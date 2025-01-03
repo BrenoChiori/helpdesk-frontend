@@ -24,6 +24,7 @@ import { ProdutosListComponent } from './components/produtos/produtos-list/produ
 import { ProdutosUpdateComponent } from './components/produtos/produtos-update/produtos-update.component';
 import { ProdutosReadComponent } from './components/produtos/produtos-read/produtos-read.component';
 import { ProdutosCreateComponent } from './components/produtos/produtos-create/produtos-create.component';
+import { PedidosListComponent } from './components/pedidos/pedidos-list/pedidos-list.component';
 
 const routes: Routes = [
   {
@@ -56,7 +57,9 @@ const routes: Routes = [
       {path: 'produtos',              component: ProdutosListComponent     },
       {path: 'produtos/create',       component: ProdutosCreateComponent   },
       {path: 'produtos/update/:id',   component: ProdutosUpdateComponent   },
-      {path: 'produtos/read/:id',     component: ProdutosReadComponent     }
+      {path: 'produtos/read/:id',     component: ProdutosReadComponent     },
+
+      {path: 'pedidos',               component: PedidosListComponent      }
     ]
   }
 ];

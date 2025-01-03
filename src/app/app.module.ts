@@ -49,6 +49,7 @@ import { ProdutosListComponent } from './components/produtos/produtos-list/produ
 import { ProdutosUpdateComponent } from './components/produtos/produtos-update/produtos-update.component';
 import { ProdutosReadComponent } from './components/produtos/produtos-read/produtos-read.component';
 import { ProdutosCreateComponent } from './components/produtos/produtos-create/produtos-create.component';
+import { PedidosListComponent } from './components/pedidos/pedidos-list/pedidos-list.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import { ProdutosCreateComponent } from './components/produtos/produtos-create/p
     ProdutosListComponent,
     ProdutosUpdateComponent,
     ProdutosReadComponent,
-    ProdutosCreateComponent
+    ProdutosCreateComponent,
+    PedidosListComponent
   ],
   imports: [
     BrowserModule,
