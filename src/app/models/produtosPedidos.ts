@@ -2,7 +2,7 @@ import { Fornecedor } from "./fornecedor"
 import { Pedidos } from "./pedidos"
 import { Produtos } from "./produtos"
 
-export class ProdutosPedidos {
+export interface ProdutosPedidos {
     id?: any
     produto: Produtos
     quantidade: number
