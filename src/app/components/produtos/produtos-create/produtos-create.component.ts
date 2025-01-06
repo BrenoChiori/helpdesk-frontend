@@ -20,12 +20,10 @@ export class ProdutosCreateComponent implements OnInit {
     id: '',
     marca: '',
     nomeProduto: '',
-    fornecedor: ''
   }
 
   nomeProduto: FormControl = new FormControl(null, Validators.minLength(3))
   marca: FormControl = new FormControl(null, Validators.required)
-  fornecedor: FormControl = new FormControl(null, Validators.required)
 
   constructor(
     private produtosService: ProdtutosService,
@@ -35,13 +33,6 @@ export class ProdutosCreateComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.findAllFornecedores()
-  }
-
-  findAllFornecedores(): void {
-    this.fornecedorService.findAll().subscribe(resposta => {
-      this.fornecedores = resposta
-    })
   }
 
   create(): void {
@@ -54,7 +45,7 @@ export class ProdutosCreateComponent implements OnInit {
   }
 
   validaCampos(): boolean {
-    return this.nomeProduto.valid && this.marca.valid && this.fornecedor.valid
+    return this.nomeProduto.valid && this.marca.valid
   }
 
 }

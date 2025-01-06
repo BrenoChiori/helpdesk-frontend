@@ -15,14 +15,13 @@ export class ProdutosListComponent implements OnInit {
   ELEMENT_DATA: Produtos[] = []
   FILTERED_DATA: Produtos[] = []
 
-  displayedColumns: string[] = ['id', 'nomeProduto', 'marca', 'fornecedor', 'acoes']
+  displayedColumns: string[] = ['id', 'nomeProduto', 'marca', 'acoes']
   dataSource = new MatTableDataSource<Produtos>(this.ELEMENT_DATA)
 
   @ViewChild(MatPaginator) paginator: MatPaginator
 
   constructor(
-    private produtoService: ProdtutosService, 
-    private fornecedorService: FornecedorService) { }
+    private produtoService: ProdtutosService) { }
 
   ngOnInit(): void {
     this.findAll()
@@ -31,17 +30,8 @@ export class ProdutosListComponent implements OnInit {
   findAll() {
     this.produtoService.findAll().subscribe(resposta => {
       this.ELEMENT_DATA = resposta
-      this.findFornecedorName()
       this.dataSource = new MatTableDataSource<Produtos>(resposta)
       this.dataSource.paginator = this.paginator
-    })
-  }
-
-  findFornecedorName() {
-    this.ELEMENT_DATA.forEach(produto => {
-      this.fornecedorService.findById(produto.fornecedor).subscribe(resposta => {
-        produto.fornecedor = resposta.nome
-      })
     })
   }
 

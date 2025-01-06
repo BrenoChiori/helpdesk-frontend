@@ -19,8 +19,7 @@ export class ProdutosUpdateComponent implements OnInit {
   produtos: Produtos = {
     id: '',
     marca: '',
-    nomeProduto: '',
-    fornecedor: ''
+    nomeProduto: ''
   }
 
   nomeProduto: FormControl = new FormControl(null, Validators.minLength(3))
@@ -29,14 +28,12 @@ export class ProdutosUpdateComponent implements OnInit {
 
   constructor(
     private produtosService: ProdtutosService,
-    private fornecedorService: FornecedorService,
     private toast: ToastrService,
     private router: Router,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    this.findAllFornecedores()
     this.produtos.id = this.route.snapshot.paramMap.get('id')
     this.findById()
   }
@@ -46,12 +43,6 @@ export class ProdutosUpdateComponent implements OnInit {
       this.produtos = resposta
     }, ex => {
       this.toast.error(ex.error.error)
-    })
-  }
-
-  findAllFornecedores() {
-    this.fornecedorService.findAll().subscribe(resposta => {
-      this.fornecedores = resposta
     })
   }
 

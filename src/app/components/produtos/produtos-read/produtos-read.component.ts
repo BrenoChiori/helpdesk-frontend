@@ -17,14 +17,11 @@ export class ProdutosReadComponent implements OnInit {
     id: '',
     marca: '',
     nomeProduto: '',
-    fornecedor: ''
   }
 
   constructor(
     private produtosService: ProdtutosService,
-    private fornecedorService: FornecedorService,
     private toast: ToastrService,
-    private router: Router,
     private route: ActivatedRoute
   ) { }
 
