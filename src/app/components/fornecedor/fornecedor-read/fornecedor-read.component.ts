@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Fornecedor } from 'src/app/models/fornecedor';
 import { FornecedorService } from 'src/app/services/fornecedor.service';
@@ -35,7 +34,6 @@ export class FornecedorReadComponent implements OnInit {
   constructor(
     private service: FornecedorService,
     private toast: ToastrService,
-    private router: Router,
     private route: ActivatedRoute
   ) { }
 
