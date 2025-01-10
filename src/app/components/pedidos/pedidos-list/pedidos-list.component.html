@@ -4,10 +4,11 @@
   
     <button routerLink="create" class="mat-elevation-z8" mat-stroked-button color="primary">Novo pedido</button>
   
-    <mat-form-field appearance="standard">
-      <mat-label>Filtro</mat-label>
-      <input matInput (keyup)="applyFilter($event)" #input>
-    </mat-form-field>
+    <mat-radio-group color="primary">
+      <mat-radio-button (click)="orderByStatus('ABERTO')" value="ABERTO">ABERTO</mat-radio-button>
+      <mat-radio-button (click)="orderByStatus('ANDAMENTO')" value="ANDAMENTO">EM ANDAMENTO</mat-radio-button>
+      <mat-radio-button (click)="orderByStatus('ENCERRADO')" value="ENCERRADO">ENCERRADO</mat-radio-button>
+  </mat-radio-group>
       
     <div class="mat-elevation-z8">
   

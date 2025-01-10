@@ -34,18 +34,25 @@ export class PedidosListComponent implements OnInit {
   }
 
   retornaStatus(status: any): string {
-    if(status == '0') {
+    if(status == 'ABERTO') {
       return 'ABERTO'
-    } else if(status == '1') {
+    } else if(status == 'ANDAMENTO') {
       return 'EM ANDAMENTO'
     } else {
       return 'ENCERRADO'
     }
   }
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+  orderByStatus(status: any): void {
+    let list: Pedidos[] = []
+    this.ELEMENT_DATA.forEach(element => {
+      if(element.status == status){
+        list.push(element)
+      }
+    })
+    this.FILTERED_DATA = list
+    this.dataSource = new MatTableDataSource<Pedidos>(list);
+    this.dataSource.paginator = this.paginator
   }
 
 }
