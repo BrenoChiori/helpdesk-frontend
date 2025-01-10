@@ -14,4 +14,8 @@ export class PedidosService {
   findAll(): Observable<Pedidos[]> {
     return this.http.get<Pedidos[]>(`${API_CONFIG.baseUrl}/pedidos`)
   }
+
+  create(pedido: Pedidos): Observable<Pedidos> {
+    return this.http.post<Pedidos>(`${API_CONFIG.baseUrl}/pedidos`, pedido)
+  }
 }

@@ -1,10 +1,11 @@
 import { ProdutosPedidos } from "./produtosPedidos"
+import { Status } from "./status"
 
-export interface Pedidos {
+export class Pedidos {
     id?:            any
-    dataPedido:     string
+    dataPedido?:    string
     dataEntrega:    string
-    status:         string
+    status:         Status
     valorTotal:     number
-    // listaProdutos:  ProdutosPedidos[]
+    listaProdutos:  ProdutosPedidos[]
 }

@@ -1,5 +1,5 @@
 .container {
-    width: 45%;
+    width: 85%;
     margin: auto auto 3rem auto;
     padding: 1rem;
     border-radius: 1rem;
@@ -8,6 +8,15 @@
 .full-width {
     width: 100%;
 }
+
+.date {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date form {
+    width: 32%;
+}   
 
 h1, img, p {
     text-align: center;
@@ -19,6 +28,16 @@ img {
 
 mat-form-field {
     width: 100%;
+}
+
+.add-item {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    mat-form-field {
+        width: 23%;
+    }
 }
 
 .observacao {
@@ -33,4 +52,36 @@ button {
 p {
     margin-top: 3rem;
     opacity: .5;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.button-add {
+    margin-top: -.1rem;
+
+    button {
+        height: 3rem;
+        width: auto;
+        align-items: center;
+    }
+}
+
+i {
+
+    cursor: pointer;
+}
+
+.edit {
+    color: rgb(0, 153, 255);
+}
+
+.delete {
+    color:red;
+}
+
+input[disabled] {
+    color: black;
 }

@@ -15,6 +15,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
 import { MatTableModule } from '@angular/material/table';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatInputModule } from '@angular/material/input';
@@ -50,6 +52,7 @@ import { ProdutosUpdateComponent } from './components/produtos/produtos-update/p
 import { ProdutosReadComponent } from './components/produtos/produtos-read/produtos-read.component';
 import { ProdutosCreateComponent } from './components/produtos/produtos-create/produtos-create.component';
 import { PedidosListComponent } from './components/pedidos/pedidos-list/pedidos-list.component';
+import { PedidosCreateComponent } from './components/pedidos/pedidos-create/pedidos-create.component';
 
 @NgModule({
   declarations: [
@@ -79,7 +82,8 @@ import { PedidosListComponent } from './components/pedidos/pedidos-list/pedidos-
     ProdutosUpdateComponent,
     ProdutosReadComponent,
     ProdutosCreateComponent,
-    PedidosListComponent
+    PedidosListComponent,
+    PedidosCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -100,6 +104,8 @@ import { PedidosListComponent } from './components/pedidos/pedidos-list/pedidos-
     MatRadioModule,
     MatTableModule,
     MatIconModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
     MatListModule,
     MatCardModule,
     ToastrModule.forRoot({
@@ -109,7 +115,7 @@ import { PedidosListComponent } from './components/pedidos/pedidos-list/pedidos-
     }),
     NgxMaskModule.forRoot()
   ],
-  providers: [AuthInterceptorProvider],
+  providers: [AuthInterceptorProvider, MatDatepickerModule,  {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

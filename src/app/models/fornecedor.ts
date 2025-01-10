@@ -1,4 +1,4 @@
-export interface Fornecedor {
+export class Fornecedor {
     id?:                any
     nome:               string
     email:              string
