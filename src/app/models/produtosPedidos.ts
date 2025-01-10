@@ -3,10 +3,10 @@ import { Pedidos } from "./pedidos"
 import { Produtos } from "./produtos"
 
 export class ProdutosPedidos {
-    id?: any
-    produto: Produtos
-    quantidade: number
-    fornecedor: Fornecedor
-    pedidos: Pedidos
-    valor: number
+    id?:            any
+    produto:        Produtos
+    quantidade:     number
+    fornecedor:     Fornecedor
+    pedidos:        Pedidos
+    valor:          number
 }
