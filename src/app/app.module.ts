@@ -54,6 +54,7 @@ import { ProdutosCreateComponent } from './components/produtos/produtos-create/p
 import { PedidosListComponent } from './components/pedidos/pedidos-list/pedidos-list.component';
 import { PedidosCreateComponent } from './components/pedidos/pedidos-create/pedidos-create.component';
 import { PedidosReadComponent } from './components/pedidos/pedidos-read/pedidos-read.component';
+import { PedidosUpdateComponent } from './components/pedidos/pedidos-update/pedidos-update.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +86,8 @@ import { PedidosReadComponent } from './components/pedidos/pedidos-read/pedidos-
     ProdutosCreateComponent,
     PedidosListComponent,
     PedidosCreateComponent,
-    PedidosReadComponent
+    PedidosReadComponent,
+    PedidosUpdateComponent
   ],
   imports: [
     BrowserModule,

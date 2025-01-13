@@ -23,5 +23,7 @@ export class PedidosService {
     return this.http.post<Pedidos>(`${API_CONFIG.baseUrl}/pedidos`, pedido)
   }
 
-
+  update(pedidos: Pedidos): Observable<Pedidos> {
+    return this.http.put<Pedidos>(`${API_CONFIG.baseUrl}/pedidos/${pedidos.id}`, pedidos)
+  }
 }

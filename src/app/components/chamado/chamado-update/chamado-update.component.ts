@@ -20,7 +20,7 @@ export class ChamadoUpdateComponent implements OnInit {
     prioridade:  '',
     status:      '',
     titulo:      '',
-    observacao: '',
+    observacao:  '',
     tecnico:     '',
     cliente:     '',
     nomeCliente: '',

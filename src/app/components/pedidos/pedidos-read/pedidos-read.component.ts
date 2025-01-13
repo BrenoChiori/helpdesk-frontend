@@ -50,7 +50,6 @@ export class PedidosReadComponent implements OnInit {
     }
   }
 
-  
   findById():void {
     this.servicePedidos.findById(this.pedidos.id).subscribe(resposta => {
       this.pedidos = resposta
