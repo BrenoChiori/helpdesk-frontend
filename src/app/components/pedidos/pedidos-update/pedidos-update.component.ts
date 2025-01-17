@@ -90,6 +90,12 @@ export class PedidosUpdateComponent implements OnInit {
   }
 
   adicionarProdutoPedido() {
+    const valorSemFormatacao = parseFloat(
+      this.produtosPedidos.valor.toString()
+        .replace(/[^\d]/g, '')
+        .replace(/(\d+)(\d{2})$/, '$1.$2')
+    );
+    this.produtosPedidos.valor = valorSemFormatacao;
     this.pedidos.listaProdutos.push(this.produtosPedidos)
     this.ELEMENT_DATA.push(this.produtosPedidos)
     this.dataSource.data = this.ELEMENT_DATA
@@ -107,6 +113,14 @@ export class PedidosUpdateComponent implements OnInit {
     }
   }
 
+  retornaProduto(produtoOption: Produtos, produtoTable: Produtos): boolean {
+    return produtoOption && produtoTable ? produtoOption.id === produtoTable.id : produtoOption === produtoTable;
+  }
+
+  retornaFornecedor(fornecedorOption: Fornecedor, fornecedorTable: Fornecedor): boolean {
+    return fornecedorOption && fornecedorTable ? fornecedorOption.id === fornecedorTable.id : fornecedorOption === fornecedorTable
+  }
+
   findById(): void {
     this.servicePedidos.findById(this.pedidos.id).subscribe(resposta => {
       this.pedidos = resposta
@@ -122,7 +136,6 @@ export class PedidosUpdateComponent implements OnInit {
   update(): void {
     this.valorTotal.enable();
     this.pedidos.dataEntrega = format(new Date(this.dataEntrega.value), 'dd/MM/yyyy')
-    console.log('Dados enviados para update:', this.pedidos);
     this.servicePedidos.update(this.pedidos).subscribe(resposta => {
       this.toast.success('Pedido Atualizado com sucesso', 'Atualizado pedido')
       this.router.navigate(['pedidos'])

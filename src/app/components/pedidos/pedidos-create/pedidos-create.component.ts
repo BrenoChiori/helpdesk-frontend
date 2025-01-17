@@ -20,10 +20,10 @@ import { MatTableDataSource } from '@angular/material/table';
 export class PedidosCreateComponent implements OnInit {
 
   ELEMENT_DATA: ProdutosPedidos[] = []
-  
+
   displayedColumns: string[] = ['produto.nome', 'fornecedor.nome', 'quantidade', 'valor', 'acoes']
   dataSource = new MatTableDataSource<ProdutosPedidos>(this.ELEMENT_DATA)
-  
+
   pedidos: Pedidos;
   produtosPedidos: ProdutosPedidos;
   fornecedores: Fornecedor[] = []
@@ -45,7 +45,7 @@ export class PedidosCreateComponent implements OnInit {
     this.pedidos = new Pedidos();
     this.pedidos.listaProdutos = [];
     this.produtosPedidos = new ProdutosPedidos();
-    
+
     this.findAllProdutos()
     this.findAllFornecedores()
   }
@@ -87,6 +87,12 @@ export class PedidosCreateComponent implements OnInit {
   }
 
   adicionarProdutoPedido() {
+    const valorSemFormatacao = parseFloat(
+      this.produtosPedidos.valor.toString()
+        .replace(/[^\d]/g, '')
+        .replace(/(\d+)(\d{2})$/, '$1.$2')
+    );
+    this.produtosPedidos.valor = valorSemFormatacao;
     this.pedidos.listaProdutos.push(this.produtosPedidos)
     this.ELEMENT_DATA.push(this.produtosPedidos)
     this.dataSource.data = this.ELEMENT_DATA

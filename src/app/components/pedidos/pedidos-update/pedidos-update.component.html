@@ -9,7 +9,7 @@
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>Data de Entrega</mat-label>
                 <input matInput [matDatepicker]="picker" [(ngModel)]="pedidos.dataEntrega" name="dataEntrega"
-                    [formControl]="dataEntrega" required placeholder="Ex. DD/MM/AAAA">
+                    [formControl]="dataEntrega" required placeholder="Ex. DD/MM/AAAA"   >
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
@@ -38,7 +38,7 @@
     <div class="add-item">
         <mat-form-field appearance="outline">
             <mat-label>Produto</mat-label>
-            <mat-select [(ngModel)]="produtosPedidos.produto" name="produto">
+            <mat-select [(ngModel)]="produtosPedidos.produto" name="produto" [compareWith]="retornaProduto">
                 <mat-option *ngFor="let produto of produtos" [value]="produto">
                     {{ produto.nomeProduto }}
                 </mat-option>
@@ -47,7 +47,7 @@
 
         <mat-form-field appearance="outline">
             <mat-label>Fornecedor</mat-label>
-            <mat-select [(ngModel)]="produtosPedidos.fornecedor" name="fornecedor">
+            <mat-select [(ngModel)]="produtosPedidos.fornecedor" name="fornecedor" [compareWith]="retornaFornecedor"    >
                 <mat-option *ngFor="let fornecedo of fornecedores" [value]="fornecedo">
                     {{ fornecedo.nome }}
                 </mat-option>
@@ -61,7 +61,7 @@
 
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>Valor Unitário</mat-label>
-            <input [(ngModel)]="produtosPedidos.valor" name="valor" matInput type="number">
+            <input [(ngModel)]="produtosPedidos.valor" [ngModel]="produtosPedidos.valor | currencyDynamic" name="valor" matInput>
         </mat-form-field>
 
         <div class="button-add">

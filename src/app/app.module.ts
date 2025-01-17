@@ -55,6 +55,7 @@ import { PedidosListComponent } from './components/pedidos/pedidos-list/pedidos-
 import { PedidosCreateComponent } from './components/pedidos/pedidos-create/pedidos-create.component';
 import { PedidosReadComponent } from './components/pedidos/pedidos-read/pedidos-read.component';
 import { PedidosUpdateComponent } from './components/pedidos/pedidos-update/pedidos-update.component';
+import { CurrencyDynamicPipe } from './pipes/currencyDynamic.pipe';
 
 @NgModule({
   declarations: [
@@ -87,7 +88,8 @@ import { PedidosUpdateComponent } from './components/pedidos/pedidos-update/pedi
     PedidosListComponent,
     PedidosCreateComponent,
     PedidosReadComponent,
-    PedidosUpdateComponent
+    PedidosUpdateComponent,
+    CurrencyDynamicPipe
   ],
   imports: [
     BrowserModule,

@@ -29,7 +29,7 @@
         <form class="form">
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>Valor Total</mat-label>
-                <input readonly [(ngModel)]="pedidos.valorTotal" name="valorTotal" matInput>
+                <input disabled [(ngModel)]="pedidos.valorTotal" name="valorTotal" matInput>
             </mat-form-field>
         </form>
     </div>
@@ -61,7 +61,7 @@
 
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>Valor Unitário</mat-label>
-            <input [(ngModel)]="produtosPedidos.valor" name="valor" matInput type="number">
+            <input [(ngModel)]="produtosPedidos.valor" [ngModel]="produtosPedidos.valor | currencyDynamic" matInput >
         </mat-form-field>
 
         <div class="button-add">
